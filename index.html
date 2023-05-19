@@ -7,10 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-
 <div id="content"></div>
-    <script>
-        $("#content").html(marked.parse('# Marked in browser\n\nRendered by **marked**.'));
+</body>
+<script>
     $.get('./md-test.md', function(response, status, xhr){
         console.log('---->',response)
         var c = marked.parse(response);
@@ -18,8 +17,6 @@
         $("#content").html(c);
     });
 </script>
-</body>
-
 </html>
 
 
