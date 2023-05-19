@@ -10,7 +10,9 @@
 
 <div id="content"></div>
     <script>
+        $("#content").html(marked.parse('# Marked in browser\n\nRendered by **marked**.'));
     $.get('./md-test.md', function(response, status, xhr){
+        console.log('---->',response)
         var c = marked.parse(response);
         console.log(c)
         $("#content").html(c);
