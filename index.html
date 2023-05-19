@@ -9,14 +9,15 @@
 <body>
 
 <div id="content"></div>
-</body>
-<script>
+    <script>
     $.get('./md-test.md', function(response, status, xhr){
         var c = marked(response);
         console.log(c)
         $("#content").html(c);
     });
 </script>
+</body>
+
 </html>
 
 
