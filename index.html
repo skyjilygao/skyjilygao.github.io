@@ -11,7 +11,7 @@
 <div id="content"></div>
     <script>
     $.get('./md-test.md', function(response, status, xhr){
-        var c = marked(response);
+        var c = marked.parse(response);
         console.log(c)
         $("#content").html(c);
     });
