@@ -12,7 +12,9 @@
 </body>
 <script>
     $.get('./md-test.md', function(response, status, xhr){
-        $("#content").html(marked(response));
+        var c = marked(response);
+        console.log(c)
+        $("#content").html(c);
     });
 </script>
 </html>
