@@ -11,9 +11,7 @@
 </body>
 <script>
     $.get('./md-test.md', function(response, status, xhr){
-        console.log('---->',response)
         var c = marked.parse(response);
-        console.log(c)
         $("#content").html(c);
     });
 </script>
